@@ -1,0 +1,87 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>JSPCrud</groupId>
+	<artifactId>JSPCrud</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<dependencies>
+
+		<!-- https://mvnrepository.com/artifact/junit/junit -->
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.13.2</version>
+			<scope>test</scope>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.glassfish.web/jakarta.servlet.jsp.jstl -->
+		<dependency>
+			<groupId>org.glassfish.web</groupId>
+			<artifactId>jakarta.servlet.jsp.jstl</artifactId>
+			<version>2.0.0</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/jakarta.servlet.jsp.jstl/jakarta.servlet.jsp.jstl-api -->
+		<dependency>
+			<groupId>jakarta.servlet.jsp.jstl</groupId>
+			<artifactId>jakarta.servlet.jsp.jstl-api</artifactId>
+			<version>2.0.0</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/javax.servlet/jstl -->
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>jstl</artifactId>
+			<version>1.2</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/com.microsoft.sqlserver/mssql-jdbc -->
+		<dependency>
+			<groupId>com.microsoft.sqlserver</groupId>
+			<artifactId>mssql-jdbc</artifactId>
+			<version>7.2.2.jre8</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/com.oracle/ojdbc14 -->
+		<dependency>
+			<groupId>com.oracle</groupId>
+			<artifactId>ojdbc14</artifactId>
+			<version>10.2.0.4.0</version>
+		</dependency>
+
+		<!--  	Make Sure Maven is installed in the machine like Download latest Maven .zip file website then 
+		Unzip and copy the folder to " C:\Program Files\Maven\apache-maven-3.8.6 " apache-maven-3.8.6 is your unziped folder
+		Set Environment Variables 
+		
+		JAVA_HOME   -  C:\Program Files\Java\jdk-18.0.1
+		MAVEN_HOME  -  C:\Program Files\Maven\apache-maven-3.8.6
+		In the Path Variables add - %MAVEN_HOME%\bin
+		Then Open Cmd and check mnv -v  or mvn -version or mvn hiphen-version to see if aven is installed properly 
+
+		Run the following command in Cmd with Admin Privilages.
+     	mvn install:install-file -Dfile="C:/Users/RAMESH B/Desktop/ojdbc14-10.2.0.4.0.jar" 
+		-DgroupId=com.oracle -DartifactId=ojdbc14 -Dversion=10.2.0.4.0 -Dpackaging=jar    
+		
+		After this In project->Properties->Deployment Assembly->add Maven Dependencies
+		
+		Don't Click on  Update Maven Project After this step. 
+		Why because it will remove the maven dependencies that we have added in the previous step.'
+		
+		
+		-->
+
+
+	</dependencies>
+	<build>
+		<sourceDirectory>src</sourceDirectory>
+		<plugins>
+			<plugin>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.8.1</version>
+				<configuration>
+					<source>1.8</source>
+					<target>1.8</target>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+</project>

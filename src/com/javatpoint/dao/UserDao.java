@@ -94,4 +94,3 @@ public static User getRecordById(int id){
 	return u;
 }
 }
-}

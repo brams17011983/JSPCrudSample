@@ -24,7 +24,7 @@ stages{
 
   stage('CheckOutCode'){
     steps{
-    git branch: 'master' , url: 'https://github.com/brams17011983/maven-web-application.git'
+    git branch: 'master' , url: 'https://github.com/brams17011983/JSPCrud.git'
 	
 	}
   }
